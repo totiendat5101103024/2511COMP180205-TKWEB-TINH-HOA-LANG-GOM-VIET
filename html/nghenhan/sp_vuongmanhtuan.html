@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tác Phẩm Tiêu Biểu - Nghệ nhân Vương Mạnh Tuấn</title>
+    <link rel="icon" type="icon" href="../../img/Logo Tinh hoa làng gốm việt.png">
+
+    <!-- Install Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Install Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../js/main.js"></script>
+    <link rel="stylesheet" href="../../css/stylesheet.css">
+    <style>
+        /* --- 3. ARTISAN HEADER --- */
+        .artisan-header {
+            height: 60vh;
+            background-image: url('../../img/nghenhan/nd-vuongmanhtuan/nd-vuongmanhtuan1.jpg');
+            background-size: cover;
+            background-position: center 25%;
+            display: flex;
+            align-items: flex-end;
+            color: white;
+            position: relative;
+            margin-top: -90px;
+            padding: 4rem 0;
+        }
+
+        .artisan-header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+        }
+
+        .artisan-header .content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .artisan-header h1 {
+            font-size: 4rem;
+            color: white;
+        }
+
+        .artisan-header .title {
+            color: #ddd;
+            font-size: 1.2rem;
+        }
+
+        /* --- 4. FEATURED WORK SECTION --- */
+        .featured-work {
+            background-color: #fff;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.07);
+            margin-bottom: 4rem;
+        }
+
+        .featured-work img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        .featured-work .work-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-top: 2rem;
+        }
+
+        .featured-work .work-meta {
+            color: var(--color-accent);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .featured-work .work-description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav id="main-navbar" class="navbar navbar-expand-lg fixed-top navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../../index.html">
+                <img src="../../img/Logo Tinh hoa làng gốm việt.png" alt="Logo Tinh Hoa Gốm Việt">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">Trang Chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../index.html#story">Giới Thiệu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../index.html#featured-products">Sản Phẩm</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../nghenhan.html">Nghệ Nhân</a></li> 
+                    <li class="nav-item"><a class="nav-link" href="../khampha.html">Khám Phá</a></li>
+                </ul>
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <form class="d-flex position-relative" id="search-form">
+                            <input class="form-control me-2" type="search" id="search-input" placeholder="Tìm kiếm..." aria-label="Search" autocomplete="off">
+                            <button class="btn btn-outline-light" type="submit"><i class="bi bi-search"></i></button>
+                            <div id="search-results-list" class="search-results-dropdown list-group"></div>
+                        </form>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="[ĐƯỜNG DẪN ĐẾN html/cart.html]"><i class="bi bi-cart"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="../dangnhap.html"><i class="bi bi-person-circle fs-4"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="artisan-header">
+        <div class="container content">
+            <h1 class="display-2">Vương Mạnh Tuấn</h1>
+            <p class="title">Nghệ nhân gắn bó với nghề gốm gần 40 năm</p>
+        </div>
+    </header>
+
+    <main class="container my-5 py-5">
+        <h2 class="text-center display-4 mb-5">Tác Phẩm Tiêu Biểu</h2>
+
+        <section class="featured-work">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <img src="../../img/nghenhan/nd-vuongmanhtuan/vmt-ấm tử sa.jpg" alt="Ấm Tử Sa">
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="work-title">Ấm Tử Sa</h3>
+                    <p class="work-meta">Chất liệu: Gốm tử sa (hoặc Gốm men nâu mộc) | Kỹ thuật: Tạo hình thủ công, hoàn
+                        thiện tỉ mỉ</p>
+                    <p class="work-description">
+                        Bộ ấm trà Tử Sa mang đậm nét đẹp truyền thống và tinh tế của văn hóa trà đạo. Được chế tác từ
+                        chất liệu đất tử sa đặc biệt (hoặc gốm mộc giữ nhiệt tốt), bộ ấm được tạo hình thủ công hoàn
+                        toàn, giữ trọn vẹn sự mộc mạc, tự nhiên của đất nung. Dáng ấm và chén trà hài hòa, cân đối,
+                        không chỉ thuận tiện khi sử dụng mà còn tôn lên hương vị tinh túy của trà.
+
+                        Bề mặt ấm có thể được trang trí bằng những hoa văn khắc chìm hoặc đắp nổi nhẹ nhàng, thể hiện sự
+                        khéo léo của người thợ. Bộ ấm trà Tử Sa không chỉ là vật dụng pha trà thông thường mà còn là một
+                        tác phẩm nghệ thuật nhỏ, thể hiện sự trân trọng đối với trà và mang lại cảm giác thư thái, an
+                        yên cho người thưởng thức.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-work">
+            <div class="row g-5 align-items-center flex-row-reverse">
+                <div class="col-lg-6">
+                    <img src="../../img/nghenhan/nd-vuongmanhtuan/vmt-chiếc vò rồng.jpg" alt="Chiếc Vò Rồng">
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="work-title">Chiếc Vò Rồng</h3>
+                    <p class="work-meta">Chất liệu: Gốm men trắng (hoặc men rạn) | Kỹ thuật: Tạo hình & Đắp nổi thủ công
+                    </p>
+                    <p class="work-description">
+                        Chiếc vò gốm thể hiện kỹ thuật đắp nổi tinh xảo, lấy hình tượng Rồng làm chủ đạo. Rồng - linh
+                        vật đứng đầu trong Tứ Linh, biểu tượng cho sức mạnh, quyền uy và sự thịnh vượng - được nghệ nhân
+                        thể hiện một cách sống động qua từng chi tiết vảy, móng, bờm được đắp nổi công phu trên thân vò.
+
+                        Nắp vò được tạo hình Nghê (hoặc Lân) vững chãi, cùng với ba chân đế chạm khắc hình đầu thú, làm
+                        tăng thêm vẻ bề thế và uy nghiêm cho tác phẩm. Nước men trắng ngà (hoặc men rạn cổ điển) bao phủ
+                        toàn bộ chiếc vò, tạo nên sự trang nhã, hài hòa. Đây không chỉ là một vật dụng hữu ích mà còn là
+                        một tác phẩm nghệ thuật trang trí ấn tượng, mang đậm dấu ấn văn hóa và tay nghề tài hoa của
+                        người thợ gốm.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-dark text-white py-5">
+        <div class="container text-center">
+            <p>&copy; 2025 Tinh Hoa Làng Gốm Việt. Một sản phẩm cho đồ án học phần Thiết kế Web.</p>
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>

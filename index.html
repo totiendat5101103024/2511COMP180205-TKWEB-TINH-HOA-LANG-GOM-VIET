@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tinh Hoa Gốm Việt</title>
+    <link rel="icon" type="icon" href="img/Logo Tinh hoa làng gốm việt.png">
+
+    <!-- Install Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Install Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+
+    <!-- Link JS -->
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/index.css">
+    
+    <style>
+        /* Responsive */
+        @media (max-width: 992px) {
+            #featured-products {
+                column-count: 2;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding-top: 70px;
+            }
+
+            .navbar {
+                padding: 1rem 0;
+            }
+
+            .navbar.navbar-scrolled {
+                padding: 0.5rem 0;
+            }
+
+            #hero {
+                height: 80vh;
+                margin-top: -70px;
+            }
+
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+
+            #story img {
+                height: auto;
+                margin-bottom: 2rem;
+            }
+
+            #featured-products {
+                column-count: 1;
+            }
+
+            .hero-background {
+                background-image: url("img/index/banner - 1 - vertical.jpg");
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav id="main-navbar" class="navbar navbar-expand-lg fixed-top navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/Logo Tinh hoa làng gốm việt.png" alt="Logo Tinh Hoa Gốm Việt">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Trang Chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#story">Giới Thiệu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#featured-products">Sản Phẩm</a></li>
+                    <li class="nav-item"><a class="nav-link" href="html/nghenhan.html">Nghệ Nhân</a></li> 
+                    <li class="nav-item"><a class="nav-link" href="html/khampha.html">Khám Phá</a></li>
+                </ul>
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <form class="d-flex position-relative" id="search-form">
+                            <input class="form-control me-2" type="search" id="search-input" placeholder="Tìm kiếm..." aria-label="Search" autocomplete="off">
+                            <button class="btn btn-outline-light" type="submit"><i class="bi bi-search"></i></button>
+                            <div id="search-results-list" class="search-results-dropdown list-group"></div>
+                        </form>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="[ĐƯỜNG DẪN ĐẾN html/cart.html]"><i class="bi bi-cart"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="html/dangnhap.html"><i class="bi bi-person-circle fs-4"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <h1 class="display-1">Tinh Hoa Làng Gốm Việt</h1>
+            <p>Nơi mỗi tác phẩm kể một câu chuyện từ đất</p>
+            <a href="#featured-products" class="btn btn-primary btn-lg">Khám Phá Bộ Sưu Tập</a>
+        </div>
+    </section>
+
+    <section id="story" class="container my-5 py-5">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-5">
+                <img src="img/index/history.jpg" class="img-fluid rounded shadow-lg" alt="Làng cổ Bát Tràng">
+            </div>
+            <div class="col-lg-7">
+                <h2 class="display-4">Hồn Cốt Từ Đất</h2>
+                <p class="lead text-muted mb-4">Trải qua hơn 500 năm lịch sử, gốm Bát Tràng không chỉ là một sản phẩm
+                    thủ công, mà là kết tinh của văn hóa, lịch sử và tâm huyết của biết bao thế hệ nghệ nhân. Mỗi tác
+                    phẩm mang trong mình vẻ đẹp mộc mạc của đất, sự tinh xảo của đôi tay và câu chuyện của một làng nghề
+                    trăm tuổi.</p>
+                <a href="html/lichsubattrang.html" class="btn btn-outline-dark">Tìm hiểu thêm về Bát Tràng</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="featured-products" class="container my-5 py-5">
+        <h2 class="display-4 mb-5">Tác Phẩm Nổi Bật</h2>
+        <div class="container my-5 py-5">
+            <div class="sc-track">
+                
+                <div class="card sc-item" style="width: 18rem;">
+                    <img src="img/carousel-pic/binh-gom-bat-trang.jpg" class="card-img-top" alt="Bình gốm">
+                    <div class="card-body">
+                        <p class="card-text">Bình gốm</p>
+                    </div>
+                </div>
+                <div class="card sc-item" style="width: 18rem;">
+                    <img src="img/carousel-pic/lo-hoa-bat-trang.jpg" class="card-img-top" alt="Lọ hoa">
+                    <div class="card-body">
+                        <p class="card-text">Lọ hoa</p>
+                    </div>
+                </div>
+                <div class="card sc-item" style="width: 18rem;">
+                    <img src="img/carousel-pic/am-chen.jpg" class="card-img-top" alt="Bộ ấm chén">
+                    <div class="card-body">
+                        <p class="card-text">Bộ ấm chén</p>
+                    </div>
+                </div>
+                <div class="card sc-item" style="width: 18rem;">
+                    <img src="img/carousel-pic/chau-gom.jpg" class="card-img-top" alt="Chậu cây">
+                    <div class="card-body">
+                        <p class="card-text">Chậu cây</p>
+                    </div>
+                </div>
+                <div class="card sc-item" style="width: 18rem;">
+                    <img src="img/carousel-pic/bat.jpg" class="card-img-top" alt="Bát gốm">
+                    <div class="card-body">
+                        <p class="card-text">Bát gốm</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="categories" class="container-fluid my-5 p-0">
+        <div class="row g-0">
+            <div class="col-lg-4">
+                <a href="html/giadung.html" class="category-card"
+                    style="background-image: url('img/index/gốm\ gia\ dụng\ banner.jpg')">
+                    <h3>Gốm Gia Dụng</h3>
+                </a>
+            </div>
+            <div class="col-lg-4">
+                <a href="#" class="category-card" style="background-image: url('img/index/gốm\ trang\ trí.jpg')">
+                    <h3>Gốm Trang Trí</h3>
+                </a>
+            </div>
+            <div class="col-lg-4">
+                <a href="#" class="category-card" style="background-image: url('img/index/gốm\ trang\ sức.jpg')">
+                    <h3>Gốm Trang Sức</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-5">
+        <div class="container text-center">
+            <p>&copy; 2025 Tinh Hoa Làng Gốm Việt. Một sản phẩm cho đồ án học phần Thiết kế Web.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gặp Gỡ Nghệ Nhân</title>
+    <link rel="icon" type="icon" href="../img/Logo Tinh hoa làng gốm việt.png">
+
+    <!-- Install Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Install Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../js/main.js"></script>
+    <link rel="stylesheet" href="../css/stylesheet.css">
+    <link rel="stylesheet" href="../css/page.css">
+    <link rel="stylesheet" href="../css/nghenhan.css">
+
+    <style>
+        .page-header {
+            background-image: url("../img/nghenhan/nghenhan\ banner.jpg");
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding-top: 70px;
+            }
+
+            .navbar {
+                padding: 1rem 0;
+            }
+
+            .page-header {
+                margin-top: -70px;
+                height: 50vh;
+            }
+
+            .page-header h1 {
+                font-size: 3rem;
+            }
+        }   
+    </style>
+</head>
+
+<body>
+
+    <nav id="main-navbar" class="navbar navbar-expand-lg fixed-top navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="../img/Logo Tinh hoa làng gốm việt.png" alt="Logo Tinh Hoa Gốm Việt">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Trang Chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#story">Giới Thiệu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#featured-products">Sản Phẩm</a></li>
+                    <li class="nav-item"><a class="nav-link" href="nghenhan.html">Nghệ Nhân</a></li> 
+                    <li class="nav-item"><a class="nav-link" href="khampha.html">Khám Phá</a></li>
+                </ul>
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <form class="d-flex position-relative" id="search-form">
+                            <input class="form-control me-2" type="search" id="search-input" placeholder="Tìm kiếm..." aria-label="Search" autocomplete="off">
+                            <button class="btn btn-outline-light" type="submit"><i class="bi bi-search"></i></button>
+                            <div id="search-results-list" class="search-results-dropdown list-group"></div>
+                        </form>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="[ĐƯỜNG DẪN ĐẾN html/cart.html]"><i class="bi bi-cart"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="dangnhap.html"><i class="bi bi-person-circle fs-4"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="content">
+            <h1 class="display-1">Gặp Gỡ Nghệ Nhân</h1>
+            <p class="container lead mt-5">
+                Nghệ nhân giữ vai trò quan trọng trong việc bảo tồn và phát triển nghề
+                gốm truyền thống.
+            </p>
+        </div>
+    </header>
+
+    <main class="container my-5 py-5">
+        <div class="artisan-grid">
+
+            <div class="artisan-card">
+                <img src="../img/nghenhan/nd-trando/nd-trần độ.jpg"
+                    alt="Nghệ nhân Trần Văn Độ">
+                <h4>Trần Văn Độ</h4>
+                <span class="title">Nghệ nhân 50 năm kinh nghiệm làm gốm và tìm hiểu men cổ</span>
+                <p class="quote">"Mỗi nét vẽ trên gốm không chỉ là hoa văn, đó là cả tâm hồn và câu chuyện tôi muốn gửi
+                    gắm."</p>
+                <a href="nghenhan/sp_tranvando.html" class="btn">Xem Tác Phẩm</a>
+            </div>
+
+            <div class="artisan-card">
+                <img src="../img/nghenhan/nd-vuducthang/nd-vũ đức thắng1.jpg"
+                    alt="Nghệ nhân Vũ Đức Thắng">
+                <h4>Vũ Đức Thắng</h4>
+                <span class="title">Nghệ nhân 40 năm kinh nghiệm làm gốm truyền thống</span>
+                <p class="quote">"Tôi tìm thấy vẻ đẹp trong sự không hoàn hảo. Mỗi vết tay để lại trên đất đều là duy
+                    nhất."</p>
+                <a href="nghenhan/sp_vuducthang.html" class="btn">Xem Tác Phẩm</a>
+            </div>
+
+            <div class="artisan-card">
+                <img src="../img/nghenhan/nd-vuongmanhtuan/nd-vuongmanhtuan.jpg"
+                    alt="Nghệ nhân Vương Mạnh Tuấn">
+                <h4>Vương Mạnh Tuấn</h4>
+                <span class="title">Nghệ nhân gắn bó với nghề gốm gần 40 năm</span>
+                <p class="quote">"Lửa là người nghệ sĩ cuối cùng. Chúng tôi chỉ có thể chuẩn bị, còn lại là sự kỳ diệu
+                    của lửa."</p>
+                <a href="nghenhan/sp_vuongmanhtuan.html" class="btn">Xem Tác Phẩm</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white py-5">
+        <div class="container text-center">
+            <p>&copy; 2025 Tinh Hoa Làng Gốm Việt. Một sản phẩm cho đồ án học phần Thiết kế Web.</p>
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>

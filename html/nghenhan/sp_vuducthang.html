@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tác Phẩm Tiêu Biểu - Nghệ nhân Vũ Đức Thắng</title>
+    <link rel="icon" type="icon" href="../../img/Logo Tinh hoa làng gốm việt.png">
+
+    <!-- Install Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Install Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../js/main.js"></script>
+    <link rel="stylesheet" href="../../css/stylesheet.css">
+    <style>
+        .artisan-header {
+            height: 60vh;
+            /* THAY ẢNH CHÂN DUNG VŨ ĐỨC THẮNG */
+            background-image: url('../../img/nghenhan/nd-vuducthang/vdt.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: flex-end;
+            color: white;
+            position: relative;
+            margin-top: -90px;
+            padding: 4rem 0;
+        }
+
+        .artisan-header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, .8), transparent)
+        }
+
+        .artisan-header .content {
+            position: relative;
+            z-index: 2
+        }
+
+        .artisan-header h1 {
+            font-size: 4rem;
+            color: #fff
+        }
+
+        .artisan-header .title {
+            color: #ddd;
+            font-size: 1.2rem
+        }
+
+        .artisan-header .quote {
+            font-style: italic;
+            max-width: 600px;
+            border-left: 3px solid var(--color-accent);
+            padding-left: 1.5rem;
+            margin-top: 1rem
+        }
+
+        .featured-work {
+            background-color: #fff;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, .07);
+            margin-bottom: 4rem
+        }
+
+        .featured-work img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 6px
+        }
+
+        .featured-work .work-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-top: 2rem
+        }
+
+        .featured-work .work-meta {
+            color: var(--color-accent);
+            font-weight: 700;
+            margin-bottom: 1rem
+        }
+
+        .featured-work .work-description {
+            font-size: 1.1rem;
+            line-height: 1.8
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav id="main-navbar" class="navbar navbar-expand-lg fixed-top navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../../index.html">
+                <img src="../../img/Logo Tinh hoa làng gốm việt.png" alt="Logo Tinh Hoa Gốm Việt">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">Trang Chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../index.html#story">Giới Thiệu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../index.html#featured-products">Sản Phẩm</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../nghenhan.html">Nghệ Nhân</a></li> 
+                    <li class="nav-item"><a class="nav-link" href="../khampha.html">Khám Phá</a></li>
+                </ul>
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <form class="d-flex position-relative" id="search-form">
+                            <input class="form-control me-2" type="search" id="search-input" placeholder="Tìm kiếm..." aria-label="Search" autocomplete="off">
+                            <button class="btn btn-outline-light" type="submit"><i class="bi bi-search"></i></button>
+                            <div id="search-results-list" class="search-results-dropdown list-group"></div>
+                        </form>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="[ĐƯỜNG DẪN ĐẾN html/cart.html]"><i class="bi bi-cart"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="../dangnhap.html"><i class="bi bi-person-circle fs-4"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="artisan-header">
+        <div class="container content">
+            <h1 class="display-2">Vũ Đức Thắng</h1>
+            <p class="title">Nghệ nhân gốm đắp nổi Bát Tràng</p>
+            <p class="quote">"Tôi muốn thổi hồn vào đất, để mỗi tác phẩm gốm đều kể được một câu chuyện về văn hóa, về
+                lịch sử hào hùng của dân tộc."</p>
+        </div>
+    </header>
+
+    <main class="container my-5 py-5">
+        <h2 class="text-center display-4 mb-5">Tác Phẩm Tiêu Biểu</h2>
+
+        <section class="featured-work">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <img src="../../img/nghenhan/nd-vuducthang/vdt-giày gốm.jpg" alt="Giày gốm">
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="work-title">Giày Gốm Bát Tràng</h3>
+                    <p class="work-meta">Chất liệu: Gốm men màu | Kỹ thuật: Tạo hình & Đắp nổi phức tạp</p>
+                    <p class="work-description">
+                        Tác phẩm độc đáo này là một minh chứng cho sự sáng tạo không giới hạn của nghệ nhân Vũ Đức
+                        Thắng, vượt ra khỏi những hình dáng gốm truyền thống. Chiếc giày cao gót được tạo hình hoàn toàn
+                        bằng gốm sứ, phủ lớp men xanh ngọc bích rực rỡ, kết hợp với các chi tiết hoa văn đắp nổi cầu kỳ
+                        được điểm xuyết bằng màu vàng kim hoặc men nâu, đặc biệt ở phần gót và cổ giày.
+
+                        Tác phẩm thể hiện kỹ thuật tạo hình gốm đỉnh cao, biến vật liệu đất sét thành một biểu tượng
+                        thời trang đầy tính nghệ thuật. Nó cho thấy khả năng ứng dụng kỹ thuật đắp nổi điêu luyện của
+                        nghệ nhân lên những phom dáng hiện đại, tạo ra một sản phẩm vừa bất ngờ, vừa ấn tượng, mang đậm
+                        dấu ấn cá nhân.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-work">
+            <div class="row g-5 align-items-center flex-row-reverse">
+                <div class="col-lg-6">
+                    <img src="../../img/nghenhan/nd-vuducthang/vdt-bình gốm.jpg" alt="Bình gốm đắp nổi Vinh Quy Bái Tổ">
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="work-title">Bình Gốm Đắp Nổi "Vinh Quy Bái Tổ"</h3>
+                    <p class="work-meta">Chất liệu: Gốm men lam | Kỹ thuật: Đắp nổi, vẽ lam</p>
+                    <p class="work-description">
+                        Chiếc bình gốm là sự kết hợp giữa kỹ thuật đắp nổi sở trường của nghệ nhân và men lam truyền
+                        thống Bát Tràng. Hình ảnh đoàn rước quan trạng về làng được đắp nổi chi tiết, sống động trên
+                        thân bình, thể hiện ước vọng thành đạt và đạo lý uống nước nhớ nguồn. Nền men lam cổ kính càng
+                        làm tăng thêm vẻ đẹp trang trọng cho tác phẩm.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white py-5">
+        <div class="container text-center">
+            <p>&copy; 2025 Tinh Hoa Làng Gốm Việt. Một sản phẩm cho đồ án học phần Thiết kế Web.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

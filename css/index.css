@@ -1,0 +1,218 @@
+:root {
+    --color-background: #F8F5F2;
+    --color-text: #3D3D3D;
+    --color-black: #1a1a1a;
+    --color-accent: #B08968;
+}
+
+.btn-primary {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    padding: 12px 30px;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+.btn-primary:hover {
+    background-color: #9a7450;
+    border-color: #9a7450;
+}
+
+/* --- 3. HERO SECTION (PARALLAX) --- */
+#hero {
+    position: relative;
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    margin-top: -90px;
+    /* Kéo lên để nằm dưới navbar */
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/index/banner\ -\ 1.jfif");
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.6);
+    will-change: transform;
+}
+
+.hero-content {
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 5rem;
+    color: white;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 1rem auto 2rem;
+}
+
+/* --- 4. STORY SECTION --- */
+#story img {
+    height: 500px;
+    object-fit: cover;
+}
+
+/* --- 5. CAROUSEL SẢN PHẨM NỔI BẬT --- */
+#featured-products {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+}
+
+.sc-track {
+    border: 1px solid black;
+    border-radius: 1em;
+    display: flex;
+    overflow-x: scroll;
+    gap: 1em;
+    anchor-name: --carousel;
+    scroll-snap-type: x mandatory;
+    scroll-marker-group: after;
+    scroll-behavior: smooth;
+}
+
+.sc-track::scroll-marker-group {
+    margin: 1em;
+    display: flex;
+    justify-content: center;
+    gap: .5em;
+}
+
+.sc-item::scroll-marker {
+    content: "";
+    height: 1em;
+    width: 1em;
+    background-color: gray;
+    border-radius: 50%;
+}
+
+.sc-item::scroll-marker:target-current {
+    background-color: black;
+}
+
+.sc-track::-webkit-scrollbar {
+    display: none;
+}
+
+.sc-track::scroll-button(right),
+.sc-track::scroll-button(left) {
+    content: "←";
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    aspect-ratio: 1 / 1;
+    inline-size: 2rem;
+    block-size: 2rem;
+    font-size: 1.25rem;
+    background-color: black;
+    color: white;
+
+    position: fixed;
+    position-anchor: --carousel;
+    position-area: right center;
+    translate: -50%;
+}
+
+.sc-track::scroll-button(right):disabled,
+.sc-track::scroll-button(left):disabled {
+    opacity: 0.5;
+    cursor: auto;
+}
+
+.sc-track::scroll-button(left) {
+    position-area: left center;
+    translate: 50%;
+}
+
+.sc-track::scroll-button(right) {
+    content: "→";
+
+}
+
+.sc-item {
+    scroll-snap-align: start;
+    flex: 0 0 100%;
+}
+
+div>div>img {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center;
+    height: auto;
+    width: 100%;
+}
+
+.sc-item a {
+    margin: 0;
+    height: 2.5rem;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+}
+
+/* Responsive cho Carousel */
+@media (max-width: 1200px) {
+    .sc-item { flex: 0 0 calc(100% / 3 - 1.5rem * 2 / 3); } /* Hiển thị 3 item */
+}
+@media (max-width: 768px) {
+    .sc-item { flex: 0 0 calc(100% / 2 - 1.5rem * 1 / 2); } /* Hiển thị 2 item */
+}
+@media (max-width: 576px) {
+    .sc-item { flex: 0 0 80%; } /* Hiển thị gần 1 item */
+}
+
+/* --- 6. CATEGORIES SECTION --- */
+.category-card {
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    color: white;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.category-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: background-color 0.4s ease;
+}
+
+.category-card:hover::after {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.category-card h3 {
+    font-size: 2.5rem;
+    color: white;
+    z-index: 2;
+}

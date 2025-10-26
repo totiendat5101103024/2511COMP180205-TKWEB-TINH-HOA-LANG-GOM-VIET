@@ -1,0 +1,78 @@
+/* --- 4. BLOG LAYOUT --- */
+.post-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.post-card .card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
+
+.post-card .card-body {
+    padding: 1.75rem;
+}
+
+.post-card .post-category {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.post-card .card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.post-card .card-text {
+    color: #777;
+}
+
+.post-card .read-more {
+    font-weight: 700;
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.post-card .read-more:hover {
+    color: var(--color-accent);
+}
+
+/* --- 5. SIDEBAR --- */
+.sidebar-widget {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+}
+
+.sidebar-widget h5 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--color-accent);
+}
+
+.sidebar-widget .list-unstyled li a {
+    text-decoration: none;
+    color: var(--color-text);
+    padding: 0.5rem 0;
+    display: block;
+}
+
+.sidebar-widget .list-unstyled li a:hover {
+    color: var(--color-accent);
+}

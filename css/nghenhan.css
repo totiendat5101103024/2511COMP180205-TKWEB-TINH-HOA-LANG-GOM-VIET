@@ -1,0 +1,72 @@
+/* --- 4. ARTISAN GRID --- */
+.artisan-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2.5rem;
+}
+
+.artisan-card {
+    background: #fff;
+    border-radius: 8px;
+    text-align: center;
+    padding: 2.5rem 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.artisan-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.artisan-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+    border: 5px solid #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    filter: grayscale(100%);
+    /* Hiệu ứng ảnh đen trắng */
+    transition: filter 0.4s ease;
+}
+
+.artisan-card:hover img {
+    filter: grayscale(0%);
+    /* Hiện màu khi hover */
+}
+
+.artisan-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.artisan-card .title {
+    color: var(--color-accent);
+    font-weight: 500;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.artisan-card .quote {
+    font-style: italic;
+    color: #777;
+    margin-bottom: 1.5rem;
+}
+
+.artisan-card .btn {
+    background-color: transparent;
+    border: 2px solid var(--color-accent);
+    color: var(--color-accent);
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.artisan-card .btn:hover {
+    background-color: var(--color-accent);
+    color: white;
+}
