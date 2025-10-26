@@ -49,24 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // --- CAROUSEL AUTO-SCROLL (ĐÃ SỬA LỖI) ---
-    const track = document.querySelector(".sc-track");
-    if (track) { 
-        console.log("Setting up Infinite Carousel.");
-        const items = track.querySelectorAll(".sc-item");
-        
-        if (items.length > 1) { // Chỉ nhân bản nếu có item
-            // Nhân bản tất cả item để tạo hiệu ứng lặp vô tận
-            items.forEach((item) => {
-                const clone = item.cloneNode(true);
-                track.appendChild(clone);
-            });
-            console.log("Carousel items duplicated for infinite loop.");
-        }
-    } else {
-        console.log("Carousel track (.sc-track) not found.");
-    }
-
     // --- BUILD LUNR.JS SEARCH INDEX (Chỉ tìm tên sản phẩm) ---
     try {
         if (typeof lunr !== 'undefined') {

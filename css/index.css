@@ -70,6 +70,7 @@
 .sc-container {
     overflow: hidden; /* **QUAN TRỌNG: Che đi phần nội dung trượt */
     padding: 1rem 0;
+    display: flex;
 }
 
 .sc-track {
@@ -77,10 +78,10 @@
     gap: 1.5rem;
     /* Khoảng cách giữa các card (24px) */
     width: fit-content;
-    /* Kích thước sẽ do JS nhân đôi */
 
     /* **QUAN TRỌNG: Thêm animation trượt */
     animation: scroll 30s linear infinite;
+    padding-right: 1.5rem;
 }
 
 /* Dừng animation khi hover */
@@ -96,7 +97,7 @@
 
     to {
         /* Di chuyển sang trái đúng bằng 1 nửa chiều dài (phần gốc) */
-        transform: translateX(-50%);
+        transform: translateX(-100%);
     }
 }
 
