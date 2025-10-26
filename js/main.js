@@ -1,18 +1,35 @@
 // Dữ liệu chỉ chứa Sản phẩm để tìm kiếm (thêm trường 'image')
 const productSearchData = [
-    // --- SẢN PHẨM --- (Bây giờ có thêm 'image' field)
+    // --- SẢN PHẨM TỪ GIADUNG.HTML ---
     { id: "p1", name: "Bộ Bát Gốm Hoa Văn Sen", image: "https://images.unsplash.com/photo-1610733560133-722a8c66e4a2?q=80&w=1974&auto=format&fit=crop", url: "html/giadung.html" }, 
     { id: "p2", name: "Bộ Ấm Chén Men Lam Cổ", image: "https://images.unsplash.com/photo-1565194999252-9b2a75d18d48?q=80&w=1974&auto=format&fit=crop", url: "html/giadung.html" },
     { id: "p3", name: "Cốc Gốm Vuốt Tay Mộc", image: "https://images.unsplash.com/photo-1620499263901-d27376483b3e?q=80&w=1964&auto=format&fit=crop", url: "html/giadung.html" },
     { id: "p4", name: "Đĩa Trưng Bày Vẽ Cá Chép", image: "https://images.unsplash.com/photo-1598342435478-e6da377fb44f?q=80&w=1974&auto=format&fit=crop", url: "html/giadung.html" },
-    { id: "p5", name: "Bình gốm men hỏa biến", image: "https://images.unsplash.com/photo-1605911998335-da2ac827a419?q=80&w=1964&auto=format&fit=crop", url: "index.html#featured-products" }, 
-    { id: "p6", name: "Linh vật Thần Kim Quy", image: "img/nghenhan/nd-trando/kim quy1.gif", url: "html/nghenhan/sp_tranvando.html" },
-    { id: "p7", name: "Tượng Rồng Triều Nguyễn", image: "img/nghenhan/nd-trando/trando-tuongrong.jpg", url: "html/nghenhan/sp_tranvando.html" },
-    { id: "p8", name: "Giày Gốm Bát Tràng", image: "img/nghenhan/nd-vuducthang/vdt-giày gốm.jpg", url: "html/nghenhan/sp_vuducthang.html" },
-    { id: "p9", name: "Bình Gốm Đắp Nổi Vinh Quy Bái Tổ", image: "img/nghenhan/nd-vuducthang/vdt-bình gốm.jpg", url: "html/nghenhan/sp_vuducthang.html" },
-    { id: "p10", name: "Ấm Tử Sa", image: "img/nghenhan/nd-vuongmanhtuan/vmt-ấm tử sa.jpg", url: "html/nghenhan/sp_vuongmanhtuan.html" },
-    { id: "p11", name: "Chiếc Vò Rồng", image: "img/nghenhan/nd-vuongmanhtuan/vmt-chiếc vò rồng.jpg", url: "html/nghenhan/sp_vuongmanhtuan.html" },
-    // Thêm các sản phẩm khác, đảm bảo có image và url chính xác
+    { id: "p5", name: "Bộ Bát Men Ngọc Lục Bảo", image: "https://images.unsplash.com/photo-1605832525181-702353a404c0?q=80&w=1974&auto=format&fit=crop", url: "html/giadung.html" },
+    { id: "p6", name: "Hũ Đựng Trà Men Rạn Cổ", image: "https://images.unsplash.com/photo-1618343890587-195c47953b27?q=80&w=1964&auto=format&fit=crop", url: "html/giadung.html" },
+
+    // --- SẢN PHẨM TỪ TRANGTRI.HTML ---
+    { id: "p7", name: "Chậu cây", image: "img/gốm trang trí/chaucay.jpg", url: "html/trangtri.html" }, 
+    { id: "p8", name: "Bình gốm Mã Đáo", image: "img/gốm trang trí/gom-su1.jpg", url: "html/trangtri.html" },
+    { id: "p9", name: "Lọ hoa men nâu", image: "img/gốm trang trí/lohoa.jpg", url: "html/trangtri.html" },
+    { id: "p10", name: "Đèn gốm để bàn", image: "img/gốm trang trí/den.webp", url: "html/trangtri.html" },
+    { id: "p11", name: "Tượng Di Lặc", image: "img/gốm trang trí/tuong.png", url: "html/trangtri.html" },
+    { id: "p12", name: "Bình gốm thiên nga", image: "img/gốm trang trí/binhgomthiennga.jpg", url: "html/trangtri.html" },
+
+    // --- SẢN PHẨM TỪ TRANGSUC.HTML ---
+    { id: "p13", name: "Vòng Cổ Gốm Men Con Cua", image: "img/gốm trang sức/1Lg7BiJVR7eWn7nFNObR5w_thumb_196f.jpeg", url: "html/trangsuc.html" },
+    { id: "p14", name: "Bông Tai Gốm", image: "img/gốm trang sức/bongtaigom.jpg", url: "html/trangsuc.html" },
+    { id: "p15", name: "Cặp Nhẫn Gốm", image: "img/gốm trang sức/capnhangom.jpg", url: "html/trangsuc.html" },
+    { id: "p16", name: "Mặt Dây Chuyền Gốm", image: "img/gốm trang sức/matdaychuyengom.jpg", url: "html/trangsuc.html" },
+    { id: "p17", name: "Vòng Tay Gốm Sứ Nhiều Màu", image: "img/gốm trang sức/vongtaygomnhieumau.webp", url: "html/trangsuc.html" },
+    { id: "p18", name: "Trâm Cài Tóc Gốm", image: "img/gốm trang sức/tramcaitoc.jpg", url: "html/trangsuc.html" },
+    { id: "p19", name: "Lắc Tay Gốm", image: "img/gốm trang sức/lactaygom.webp", url: "html/trangsuc.html" },
+    { id: "p20", name: "Dây Chuyền Gốm Hình Viên Kẹo", image: "img/gốm trang sức/daychuyengomvienkeo.jpg", url: "html/trangsuc.html" },
+    { id: "p21", name: "Bông Tai Gốm Sứ Xanh", image: "img/gốm trang sức/bongtaigom (2).jpg", url: "html/trangsuc.html" },
+    { id: "p22", name: "Nhẫn Gốm Men", image: "img/gốm trang sức/nhangommen.jpg", url: "html/trangsuc.html" },
+    { id: "p23", name: "Lắc Tay Gốm Lục Lạc", image: "img/gốm trang sức/lactay.jpg", url: "html/trangsuc.html" },
+    { id: "p24", name: "Vòng Cổ Gốm Men", image: "img/gốm trang sức/vongcogomen.jpg", url: "html/trangsuc.html" },
+
 ];
 
 let searchIndex; // Biến lưu chỉ mục Lunr
