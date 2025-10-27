@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tinh Hoa Gốm Việt</title>
+    <title>Tinh Hoa Làng Gốm Việt</title>
     <link rel="icon" type="icon" href="img/Logo Tinh hoa làng gốm việt.png">
 
     <!-- Install Bootstrap 5 -->
@@ -26,8 +26,12 @@
     <!-- Link CSS -->
     <link rel="stylesheet" href="css/stylesheet.css">
     <link rel="stylesheet" href="css/index.css">
-    
+
     <style>
+        .hero-background {
+            background-image: url("../img/index/banner - 1.jfif");
+        }
+
         @media (max-width: 768px) {
             body {
                 padding-top: 70px;
@@ -54,44 +58,53 @@
                 height: auto;
                 margin-bottom: 2rem;
             }
-
-            #featured-products {
-                column-count: 1;
-            }
-
+            
             .hero-background {
                 background-image: url("img/index/banner - 1 - vertical.jpg");
+            }
+
+            .sc-track {
+                gap: 1rem;
+                animation: scroll 25s linear infinite;
+            }
+
+            .sc-item {
+                flex-basis: 250px;
+                width: 250px;
             }
         }
     </style>
 </head>
 
 <body>
-
+    <!-- Navbar -->
     <nav id="main-navbar" class="navbar navbar-expand-lg fixed-top navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <img src="img/Logo Tinh hoa làng gốm việt.png" alt="Logo Tinh Hoa Gốm Việt">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span
+                    class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Trang Chủ</a></li>
                     <li class="nav-item"><a class="nav-link" href="#story">Giới Thiệu</a></li>
                     <li class="nav-item"><a class="nav-link" href="#featured-products">Sản Phẩm</a></li>
-                    <li class="nav-item"><a class="nav-link" href="html/nghenhan.html">Nghệ Nhân</a></li> 
+                    <li class="nav-item"><a class="nav-link" href="html/nghenhan.html">Nghệ Nhân</a></li>
                     <li class="nav-item"><a class="nav-link" href="html/khampha.html">Khám Phá</a></li>
                 </ul>
                 <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item">
                         <form class="d-flex position-relative" id="search-form">
-                            <input class="form-control me-2" type="search" id="search-input" placeholder="Tìm kiếm..." aria-label="Search" autocomplete="off">
+                            <input class="form-control me-2" type="search" id="search-input" placeholder="Tìm kiếm..."
+                                aria-label="Search" autocomplete="off">
                             <button class="btn btn-outline-light" type="submit"><i class="bi bi-search"></i></button>
                             <div id="search-results-list" class="search-results-dropdown list-group"></div>
                         </form>
                     </li>
                     <li class="nav-item"><a class="nav-link" href=""><i class="bi bi-cart"></i></a></li>
-                    <li class="nav-item"><a class="nav-link" href="html/dangnhap.html"><i class="bi bi-person-circle fs-4"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="html/dangnhap.html"><i
+                                class="bi bi-person-circle fs-4"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -122,9 +135,11 @@
         </div>
     </section>
 
+    <!-- CSS Carousel -->
     <section id="featured-products" class="container my-5 py-5">
         <h2 class="text-center display-4 mb-5">Tác Phẩm Nổi Bật</h2>
-        <div class="sc-container">  
+        <div class="sc-container">
+
             <div class="sc-track">
                 <div class="card sc-item" style="width: 18rem;">
                     <img src="img/carousel-pic/binh-gom-bat-trang.jpg" class="card-img-top" alt="Bình gốm">
@@ -193,6 +208,7 @@
         </div>
     </section>
 
+    <!-- Products -->
     <section id="categories" class="container-fluid my-5 p-0">
         <div class="row g-0">
             <div class="col-lg-4">
@@ -202,24 +218,26 @@
                 </a>
             </div>
             <div class="col-lg-4">
-                <a href="html/trangtri.html" class="category-card" style="background-image: url('img/index/gốm\ trang\ trí.jpg')">
+                <a href="html/trangtri.html" class="category-card"
+                    style="background-image: url('img/index/gốm\ trang\ trí.jpg')">
                     <h3>Gốm Trang Trí</h3>
                 </a>
             </div>
             <div class="col-lg-4">
-                <a href="html/trangsuc.html" class="category-card" style="background-image: url('img/index/gốm\ trang\ sức.jpg')">
+                <a href="html/trangsuc.html" class="category-card"
+                    style="background-image: url('img/index/gốm\ trang\ sức.jpg')">
                     <h3>Gốm Trang Sức</h3>
                 </a>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="bg-dark text-white py-5">
         <div class="container text-center">
             <p>&copy; 2025 Tinh Hoa Làng Gốm Việt. Một sản phẩm cho đồ án học phần Thiết kế Web.</p>
         </div>
     </footer>
-
 </body>
 
 </html>

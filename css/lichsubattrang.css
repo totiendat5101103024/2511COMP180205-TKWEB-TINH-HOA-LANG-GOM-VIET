@@ -1,6 +1,5 @@
 .post-header {
     height: 70vh;
-    background-image: url('../img/cho-gom-bat-trang-dep\ -\ Copy.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -35,7 +34,7 @@
     font-size: 0.9rem;
 }
 
-/* --- 4. TIMELINE --- */
+/* --- TIMELINE --- */
 .timeline {
     position: relative;
     max-width: 900px;

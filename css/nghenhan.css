@@ -1,4 +1,4 @@
-/* --- 4. ARTISAN GRID --- */
+/* --- ARTISAN --- */
 .artisan-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -28,13 +28,11 @@
     border: 5px solid #fff;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     filter: grayscale(100%);
-    /* Hiệu ứng ảnh đen trắng */
     transition: filter 0.4s ease;
 }
 
 .artisan-card:hover img {
     filter: grayscale(0%);
-    /* Hiện màu khi hover */
 }
 
 .artisan-card h4 {

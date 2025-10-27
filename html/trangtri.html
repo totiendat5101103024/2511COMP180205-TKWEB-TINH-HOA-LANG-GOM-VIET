@@ -34,18 +34,11 @@
             background-image: url("../img/gốm trang trí/banner-gom-trang-tri.jpg");
         }
 
-        /* Ẩn/hiện mượt mà cho bộ lọc */
-        .product-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.4s ease, max-height 0.5s ease;
-            overflow: hidden;
-        }
-
         .product-card.hidden {
             opacity: 0;
             max-height: 0;
             padding: 0;
             margin-bottom: 0 !important;
-            /* Quan trọng để xóa khoảng trống */
             transform: scale(0.9);
         }
 
@@ -63,7 +56,7 @@
 </head>
 
 <body>
-
+    <!-- Navbar -->
     <nav id="main-navbar" class="navbar navbar-expand-lg fixed-top navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="../index.html">
@@ -113,6 +106,7 @@
         </div>
     </div>
 
+    <!-- Products -->
     <main class="container my-5 py-5">
         <div class="product-grid">
 
@@ -165,66 +159,15 @@
                 </div>
             </div>
         </div>
+
     </main>
 
-    <div class="modal fade" id="productQuickViewModal" tabindex="-1" aria-labelledby="productModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered"> <!-- modal-lg để pop-up lớn hơn -->
-            <div class="modal-content">
-                <div class="modal-header border-0">
-                    <!-- {/* Nút X để đóng */} -->
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row g-4">
-                        <!-- {/* Cột hình ảnh sản phẩm */} -->
-                        <div class="col-md-6">
-                            <img src="" id="modalProductImage" class="img-fluid rounded" alt="Product Image">
-                        </div>
-
-                        <!-- {/* Cột thông tin sản phẩm */} -->
-                        <div class="col-md-6 d-flex flex-column">
-                            <h2 class="heading-font" id="modalProductTitle">Tên sản phẩm sẽ ở đây</h2>
-
-                            <p class="fs-3 fw-bold mb-3" id="modalProductPrice" style="color: var(--color-accent);">Giá
-                                tiền</p>
-
-                            <!-- {/* Tùy chọn (giống trong ảnh bạn gửi) */} -->
-                            <div class="mb-3">
-                                <label for="modalProductOptions" class="form-label fw-bold">Tùy chọn:</label>
-                                <select class="form-select" id="modalProductOptions">
-                                    <option selected>Chọn kích thước/màu...</option>
-                                    <option value="1">Lựa chọn 1</option>
-                                    <option value="2">Lựa chọn 2</option>
-                                </select>
-                            </div>
-
-                            <!-- {/* Số lượng (giống trong ảnh bạn gửi) */} -->
-                            <div class="mb-4">
-                                <label for="modalProductQuantity" class="form-label fw-bold">Số lượng:</label>
-                                <input type="number" class="form-control" id="modalProductQuantity" value="1" min="1"
-                                    style="max-width: 100px;">
-                            </div>
-
-                            <!-- {/* Nút Thêm vào giỏ */} -->
-                            <button class="btn btn-primary btn-lg w-100"
-                                style="background-color: var(--color-accent); border-color: var(--color-accent);">
-                                Thêm vào giỏ hàng
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    <!-- Footer -->
     <footer class="bg-dark text-white py-5">
         <div class="container text-center">
             <p>&copy; 2025 Tinh Hoa Làng Gốm Việt. Một sản phẩm cho đồ án học phần Thiết kế Web.</p>
         </div>
     </footer>
-
-
 </body>
 
 </html>

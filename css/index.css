@@ -18,7 +18,7 @@
     border-color: #9a7450;
 }
 
-/* --- 3. HERO SECTION (PARALLAX) --- */
+/* --- HERO (PARALLAX) --- */
 #hero {
     position: relative;
     height: 95vh;
@@ -37,7 +37,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("../img/index/banner - 1.jfif");
     background-size: cover;
     background-position: center;
     filter: brightness(0.6);
@@ -60,15 +59,15 @@
     margin: 1rem auto 2rem;
 }
 
-/* --- 4. STORY SECTION --- */
+/* --- STORY --- */
 #story img {
     height: 500px;
     object-fit: cover;
 }
 
-/* --- 5. CAROUSEL SẢN PHẨM NỔI BẬT (ĐÃ CHỈNH SỬA) --- */
+/* --- CSS CAROUSEL--- */
 .sc-container {
-    overflow: hidden; /* **QUAN TRỌNG: Che đi phần nội dung trượt */
+    overflow: hidden; 
     padding: 1rem 0;
     display: flex;
 }
@@ -76,33 +75,26 @@
 .sc-track {
     display: flex;
     gap: 1.5rem;
-    /* Khoảng cách giữa các card (24px) */
     width: fit-content;
-
-    /* **QUAN TRỌNG: Thêm animation trượt */
     animation: scroll 30s linear infinite;
     padding-right: 1.5rem;
 }
 
-/* Dừng animation khi hover */
 .sc-container:hover .sc-track {
     animation-play-state: paused;
 }
 
-/* Keyframes cho animation cuộn */
 @keyframes scroll {
     from {
         transform: translateX(0);
     }
 
     to {
-        /* Di chuyển sang trái đúng bằng 1 nửa chiều dài (phần gốc) */
         transform: translateX(-100%);
     }
 }
 
 .sc-item {
-    /* Đặt chiều rộng cơ sở (flex-basis) */
     flex: 0 0 300px;
     width: 300px;
     transition: transform 0.3s ease;
@@ -110,12 +102,10 @@
 
 .sc-item:hover {
     transform: translateY(-5px);
-    /* Hiệu ứng nhấc lên */
 }
 
 .sc-item .card-img-top {
     height: 250px;
-    /* Chiều cao cố định cho ảnh */
     object-fit: cover;
 }
 
@@ -123,8 +113,7 @@
     text-align: center;
 }
 
-/* --- 6. CATEGORIES SECTION --- */
-/* (Code .category-card giữ nguyên như cũ) */
+/* --- CATEGORIES PRODUCT --- */
 .category-card {
     height: 400px;
     background-size: cover;
@@ -158,41 +147,4 @@
     font-size: 2.5rem;
     color: white;
     z-index: 2;
-}
-
-/* --- RESPONSIVE RIÊNG CHO TRANG INDEX --- */
-@media (max-width: 768px) {
-    #hero {
-        height: 80vh;
-        margin-top: -70px;
-    }
-
-    .hero-content h1 {
-        font-size: 3rem;
-    }
-
-    #story img {
-        height: auto;
-        margin-bottom: 2rem;
-    }
-
-    .hero-background {
-        background-image: url("../img/index/banner - 1 - vertical.jpg");
-    }
-
-    /* Ảnh mobile */
-
-    /* Điều chỉnh carousel cho mobile */
-    .sc-track {
-        gap: 1rem;
-        /* Giảm khoảng cách trên mobile */
-        /* Tăng thời gian animation vì ít nội dung hơn */
-        animation: scroll 25s linear infinite;
-    }
-
-    .sc-item {
-        flex-basis: 250px;
-        /* Thu nhỏ item một chút trên mobile */
-        width: 250px;
-    }
 }

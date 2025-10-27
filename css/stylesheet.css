@@ -1,13 +1,8 @@
-/* --- 1. NỀN TẢNG THIẾT KẾ (DESIGN SYSTEM) --- */
 :root {
     --color-background: #F8F5F2;
-    /* Trắng ngà */
     --color-text: #3D3D3D;
-    /* Xám đậm */
     --color-black: #1a1a1a;
-    /* Đen mềm */
     --color-accent: #B08968;
-    /* Nâu đất */
     --color-light-gray: #e9e3dc;
 }
 
@@ -15,7 +10,6 @@ body {
     font-family: 'Montserrat', sans-serif;
     color: var(--color-text);
     background-color: var(--color-background);
-    /* padding-top bị xóa đi để tránh khoảng trắng */
 }
 
 h1,
@@ -27,8 +21,7 @@ h4,
     color: var(--color-text);
 }
 
-/* --- 2. NAVBAR CHUNG (HIỆU ỨNG TRONG SUỐT & ĐEN) --- */
-/* Thêm padding-top cho body để nội dung không bị che bởi navbar CỐ ĐỊNH */
+/* --- NAVBAR HIỆU ỨNG TRONG SUỐT --- */
 body {
     padding-top: 90px;
 }
@@ -36,14 +29,11 @@ body {
 .navbar {
     transition: background-color 0.4s ease-in-out, padding 0.4s ease-in-out;
     padding: 1.5rem 0;
-    /* Mặc định cho hiệu ứng (sẽ bị ghi đè bởi bg-black ở trang login/register) */
     background-color: transparent !important;
 }
 
-/* Trạng thái khi cuộn (JS thêm class này) hoặc khi cố định màu đen */
 .navbar.navbar-scrolled,
 .navbar.bg-black {
-    /* Thêm bg-black vào đây */
     background-color: var(--color-black) !important;
     padding: 0.5rem 0;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -56,30 +46,24 @@ body {
 
 .navbar.navbar-scrolled .navbar-brand img,
 .navbar.bg-black .navbar-brand img {
-    /* Thêm bg-black vào đây */
     max-height: 40px;
 }
 
-/* Màu chữ link navbar */
 .navbar .nav-link {
     color: white;
-    /* Thêm bóng đổ nhẹ để dễ đọc hơn trên nền trong suốt */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-/* Khi navbar có nền đen, bỏ bóng đổ */
 .navbar.navbar-scrolled .nav-link,
 .navbar.bg-black .nav-link {
-    /* Thêm bg-black vào đây */
     text-shadow: none;
 }
 
-/* Căn chỉnh các icon bên phải navbar */
 .navbar .navbar-nav.ms-auto {
     align-items: center;
 }
 
-/* --- 3. CSS CHO DROPDOWN KẾT QUẢ TÌM KIẾM (Có ảnh) --- */
+/* --- CSS CHO DROPDOWN KẾT QUẢ --- */
 .search-results-dropdown {
     position: absolute;
     top: 100%;
@@ -93,18 +77,11 @@ body {
     max-height: 400px;
     overflow-y: auto;
     display: none;
-    /* Ẩn thanh cuộn */
-    scrollbar-width: none;
-    /* Firefox */
-    -ms-overflow-style: none;
-    /* IE 10+ */
 }
 
 .search-results-dropdown::-webkit-scrollbar {
     display: none;
 }
-
-/* Chrome, Safari, Edge */
 
 .search-results-dropdown a.list-group-item {
     display: flex;
@@ -146,21 +123,18 @@ body {
     display: block;
 }
 
-/* --- 4. RESPONSIVE CHUNG --- */
+/* --- RESPONSIVE --- */
 @media (max-width: 768px) {
     body {
         padding-top: 70px;
-        /* Điều chỉnh lại padding cho navbar mobile */
     }
 
     .navbar {
         padding: 1rem 0;
-        /* Padding mặc định mobile */
     }
 
     .navbar.navbar-scrolled,
     .navbar.bg-black {
         padding: 0.5rem 0;
-        /* Padding khi cuộn/đen mobile */
     }
 }
