@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let pathToRoot = "";
     const path = window.location.pathname;
 
-    if (path.includes('/html/nghenhan/')) {
+    if (path.includes('/html/nghenhan/') || path.includes('/html/sanpham/')) {
         pathToRoot = "../../";
     } else if (path.includes('/html/')) {
         pathToRoot = "../";
