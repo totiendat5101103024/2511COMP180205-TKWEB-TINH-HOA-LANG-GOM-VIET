@@ -1,35 +1,33 @@
-// Dữ liệu chỉ chứa Sản phẩm để tìm kiếm (thêm trường 'image')
 const productSearchData = [
     // --- SẢN PHẨM TỪ GIADUNG.HTML ---
-    { id: "p1", name: "Bộ Bát Gốm Hoa Văn Sen", image: "https://images.unsplash.com/photo-1610733560133-722a8c66e4a2?q=80&w=1974&auto=format&fit=crop", url: "html/giadung.html" }, 
-    { id: "p2", name: "Bộ Ấm Chén Men Lam Cổ", image: "https://images.unsplash.com/photo-1565194999252-9b2a75d18d48?q=80&w=1974&auto=format&fit=crop", url: "html/giadung.html" },
-    { id: "p3", name: "Cốc Gốm Vuốt Tay Mộc", image: "https://images.unsplash.com/photo-1620499263901-d27376483b3e?q=80&w=1964&auto=format&fit=crop", url: "html/giadung.html" },
-    { id: "p4", name: "Đĩa Trưng Bày Vẽ Cá Chép", image: "https://images.unsplash.com/photo-1598342435478-e6da377fb44f?q=80&w=1974&auto=format&fit=crop", url: "html/giadung.html" },
-    { id: "p5", name: "Bộ Bát Men Ngọc Lục Bảo", image: "https://images.unsplash.com/photo-1605832525181-702353a404c0?q=80&w=1974&auto=format&fit=crop", url: "html/giadung.html" },
-    { id: "p6", name: "Hũ Đựng Trà Men Rạn Cổ", image: "https://images.unsplash.com/photo-1618343890587-195c47953b27?q=80&w=1964&auto=format&fit=crop", url: "html/giadung.html" },
+    { id: "p1", name: "Bộ Bát Đĩa Men Xanh", image: "img/gốm gia dụng/Bộ Bát Đĩa Men Xanh.jpg", url: "../html/giadung.html" },
+    { id: "p2", name: "Bộ Ấm Trà Gốm Cao Cấp", image: "img/gốm gia dụng/Bộ Ấm Trà Gốm Cao Cấp.jpg", url: "../html/giadung.html" },
+    { id: "p3", name: "Cốc Sứ Tráng Men", image: "img/gốm gia dụng/Cốc Sứ Tráng Men.jpg", url: "../html/giadung.html" },
+    { id: "p4", name: "Lọ Hoa Men Hỏa Biến Cao Cấp", image: "img/gốm gia dụng/Lọ Hoa Men Hỏa Biến Cao Cấp.jpg", url: "../html/giadung.html" },
+    { id: "p5", name: "Chậu Trồng Cây Men Xanh", image: "img/gốm gia dụng/Chậu Trồng Cây Men Xanh.jpg", url: "../html/giadung.html" },
+    { id: "p6", name: "Bình Đựng Gia Vị Gốm Mộc", image: "img/gốm gia dụng/Bình Đựng Gia Vị Gốm Mộc.jpg", url: "../html/giadung.html" },
 
     // --- SẢN PHẨM TỪ TRANGTRI.HTML ---
-    { id: "p7", name: "Chậu cây", image: "img/gốm trang trí/chaucay.jpg", url: "html/trangtri.html" }, 
-    { id: "p8", name: "Bình gốm Mã Đáo", image: "img/gốm trang trí/gom-su1.jpg", url: "html/trangtri.html" },
-    { id: "p9", name: "Lọ hoa men nâu", image: "img/gốm trang trí/lohoa.jpg", url: "html/trangtri.html" },
-    { id: "p10", name: "Đèn gốm để bàn", image: "img/gốm trang trí/den.webp", url: "html/trangtri.html" },
-    { id: "p11", name: "Tượng Di Lặc", image: "img/gốm trang trí/tuong.png", url: "html/trangtri.html" },
-    { id: "p12", name: "Bình gốm thiên nga", image: "img/gốm trang trí/binhgomthiennga.jpg", url: "html/trangtri.html" },
+    { id: "p7", name: "Chậu cây", image: "img/gốm trang trí/chaucay.jpg", url: "../html/trangtri.html" }, 
+    { id: "p8", name: "Bình gốm Mã Đáo", image: "img/gốm trang trí/gom-su1.jpg", url: "../html/trangtri.html" },
+    { id: "p9", name: "Lọ hoa men nâu", image: "img/gốm trang trí/lohoa.jpg", url: "../html/trangtri.html" },
+    { id: "p10", name: "Đèn gốm để bàn", image: "img/gốm trang trí/den.webp", url: "../html/trangtri.html" },
+    { id: "p11", name: "Tượng Di Lặc", image: "img/gốm trang trí/tuong.png", url: "../html/trangtri.html" },
+    { id: "p12", name: "Bình gốm thiên nga", image: "img/gốm trang trí/binhgomthiennga.jpg", url: "../html/trangtri.html" },
 
     // --- SẢN PHẨM TỪ TRANGSUC.HTML ---
-    { id: "p13", name: "Vòng Cổ Gốm Men Con Cua", image: "img/gốm trang sức/1Lg7BiJVR7eWn7nFNObR5w_thumb_196f.jpeg", url: "html/trangsuc.html" },
-    { id: "p14", name: "Bông Tai Gốm", image: "img/gốm trang sức/bongtaigom.jpg", url: "html/trangsuc.html" },
-    { id: "p15", name: "Cặp Nhẫn Gốm", image: "img/gốm trang sức/capnhangom.jpg", url: "html/trangsuc.html" },
-    { id: "p16", name: "Mặt Dây Chuyền Gốm", image: "img/gốm trang sức/matdaychuyengom.jpg", url: "html/trangsuc.html" },
-    { id: "p17", name: "Vòng Tay Gốm Sứ Nhiều Màu", image: "img/gốm trang sức/vongtaygomnhieumau.webp", url: "html/trangsuc.html" },
-    { id: "p18", name: "Trâm Cài Tóc Gốm", image: "img/gốm trang sức/tramcaitoc.jpg", url: "html/trangsuc.html" },
-    { id: "p19", name: "Lắc Tay Gốm", image: "img/gốm trang sức/lactaygom.webp", url: "html/trangsuc.html" },
-    { id: "p20", name: "Dây Chuyền Gốm Hình Viên Kẹo", image: "img/gốm trang sức/daychuyengomvienkeo.jpg", url: "html/trangsuc.html" },
-    { id: "p21", name: "Bông Tai Gốm Sứ Xanh", image: "img/gốm trang sức/bongtaigom (2).jpg", url: "html/trangsuc.html" },
-    { id: "p22", name: "Nhẫn Gốm Men", image: "img/gốm trang sức/nhangommen.jpg", url: "html/trangsuc.html" },
-    { id: "p23", name: "Lắc Tay Gốm Lục Lạc", image: "img/gốm trang sức/lactay.jpg", url: "html/trangsuc.html" },
-    { id: "p24", name: "Vòng Cổ Gốm Men", image: "img/gốm trang sức/vongcogomen.jpg", url: "html/trangsuc.html" },
-
+    { id: "p13", name: "Vòng Cổ Gốm Men Con Cua", image: "img/gốm trang sức/1Lg7BiJVR7eWn7nFNObR5w_thumb_196f.jpeg", url: "../html/trangsuc.html" },
+    { id: "p14", name: "Bông Tai Gốm", image: "img/gốm trang sức/bongtaigom.jpg", url: "../html/trangsuc.html" },
+    { id: "p15", name: "Cặp Nhẫn Gốm", image: "img/gốm trang sức/capnhangom.jpg", url: "../html/trangsuc.html" },
+    { id: "p16", name: "Mặt Dây Chuyền Gốm", image: "img/gốm trang sức/matdaychuyengom.jpg", url: "../html/trangsuc.html" },
+    { id: "p17", name: "Vòng Tay Gốm Sứ Nhiều Màu", image: "img/gốm trang sức/vongtaygomnhieumau.webp", url: "../html/trangsuc.html" },
+    { id: "p18", name: "Trâm Cài Tóc Gốm", image: "img/gốm trang sức/tramcaitoc.jpg", url: "../html/trangsuc.html" },
+    { id: "p19", name: "Lắc Tay Gốm", image: "img/gốm trang sức/lactaygom.webp", url: "../html/trangsuc.html" },
+    { id: "p20", name: "Dây Chuyền Gốm Hình Viên Kẹo", image: "img/gốm trang sức/daychuyengomvienkeo.jpg", url: "../html/trangsuc.html" },
+    { id: "p21", name: "Bông Tai Gốm Sứ Xanh", image: "img/gốm trang sức/bongtaigom (2).jpg", url: "../html/trangsuc.html" },
+    { id: "p22", name: "Nhẫn Gốm Men", image: "img/gốm trang sức/nhangommen.jpg", url: "../html/trangsuc.html" },
+    { id: "p23", name: "Lắc Tay Gốm Lục Lạc", image: "img/gốm trang sức/lactay.jpg", url: "../html/trangsuc.html" },
+    { id: "p24", name: "Vòng Cổ Gốm Men", image: "img/gốm trang sức/vongcogomen.jpg", url: "../html/trangsuc.html" },
 ];
 
 let searchIndex; // Biến lưu chỉ mục Lunr
@@ -64,6 +62,25 @@ document.addEventListener('DOMContentLoaded', () => {
                 parallaxBG.style.transform = 'translateY(' + scrollPosition * 0.4 + 'px)';
              });
         }
+    }
+
+    // --- CAROUSEL INFINITE LOOP ---
+    const track = document.querySelector(".sc-track");
+    if (track) { 
+        console.log("Setting up Infinite Carousel.");
+        const items = track.querySelectorAll(".sc-item");
+        
+        if (items.length > 1) { // Chỉ nhân bản nếu có item
+            // Nhân bản tất cả item để tạo hiệu ứng lặp vô tận
+            items.forEach((item) => {
+                const clone = item.cloneNode(true);
+                clone.setAttribute('aria-hidden', 'true'); // Thêm để hỗ trợ trình đọc màn hình
+                track.appendChild(clone);
+            });
+            console.log("Carousel items duplicated for infinite loop.");
+        }
+    } else {
+        console.log("Carousel track (.sc-track) not found.");
     }
 
     // --- BUILD LUNR.JS SEARCH INDEX (Chỉ tìm tên sản phẩm) ---
@@ -119,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                         if (itemUrl.startsWith('index.html#')) { itemUrl = `../../${itemUrl}`; } // Về index
                                         else if (itemUrl.startsWith('html/nghenhan/')) { itemUrl = item.url.substring(13); } // Tới sp_khac
                                         else if (itemUrl.startsWith('html/')) { itemUrl = `../${itemUrl.substring(5)}`; } // Về html/
-                                        else { itemUrl = `../../${itemUrl}`; } // Về index (nếu link là #...)
+                                        else { itemUrl = `../${itemUrl}`; } // Sửa lỗi: Về html/ (ví dụ giadung.html)
                                     } else if (isInsideHtmlFolder) { // Đang ở html/
                                         if (itemUrl.startsWith('index.html#')) { itemUrl = `../${itemUrl}`; } // Về index
                                         else if (itemUrl.startsWith('html/nghenhan/')){ itemUrl = itemUrl.substring(5); } // Tới nghenhan/
@@ -132,9 +149,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
                                 // --- Xử lý đường dẫn Ảnh tương đối ---
                                 let imagePath = item.image;
-                                if (!imagePath.startsWith('http')) { 
-                                    if (isArtisanSubFolder) { imagePath = `../../${imagePath}`; } 
-                                    else if (isInsideHtmlFolder) { imagePath = `../${imagePath}`; }
+                                if (!imagePath.startsWith('http') && !imagePath.startsWith('../')) { // Nếu không phải link tuyệt đối và không bắt đầu bằng ../
+                                    if (isArtisanSubFolder) { imagePath = `../../${imagePath}`; } // Đang ở html/nghenhan/ -> ../../img/...
+                                    else if (isInsideHtmlFolder) { imagePath = `../${imagePath}`; } // Đang ở html/ -> ../img/...
                                     // Nếu ở index.html, giữ nguyên (vd: img/...)
                                 }
 
@@ -164,7 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 resultsList.classList.remove('show');
             }
         });
-
+        
         // Xử lý khi nhấn Enter (Chuyển đến trang kết quả đầy đủ)
         searchForm.addEventListener('submit', (event) => {
              event.preventDefault();

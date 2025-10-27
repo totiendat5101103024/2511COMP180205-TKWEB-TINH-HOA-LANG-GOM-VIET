@@ -22,7 +22,7 @@
     <!-- Link JS -->
     <script src="https://unpkg.com/lunr/lunr.js"></script>
     <script src="../js/main.js"></script>
-    <script src="../js/filter.js"></script> 
+    <script src="../js/filter.js"></script>
 
     <!-- Link CSS -->
     <link rel="stylesheet" href="../css/stylesheet.css">
@@ -33,17 +33,19 @@
         .page-header {
             background-image: url("../img/gốm trang trí/banner-gom-trang-tri.jpg");
         }
-        
+
         /* Ẩn/hiện mượt mà cho bộ lọc */
         .product-card {
             transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.4s ease, max-height 0.5s ease;
             overflow: hidden;
         }
+
         .product-card.hidden {
             opacity: 0;
             max-height: 0;
             padding: 0;
-            margin-bottom: 0 !important; /* Quan trọng để xóa khoảng trống */
+            margin-bottom: 0 !important;
+            /* Quan trọng để xóa khoảng trống */
             transform: scale(0.9);
         }
 
@@ -52,6 +54,7 @@
                 margin-top: -70px;
                 height: 50vh;
             }
+
             .page-header h1 {
                 font-size: 3rem;
             }
@@ -72,7 +75,8 @@
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item"><a class="nav-link" href="../index.html">Trang Chủ</a></li>
                     <li class="nav-item"><a class="nav-link" href="../index.html#story">Giới Thiệu</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="../index.html#featured-products">Sản Phẩm</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="../index.html#featured-products">Sản Phẩm</a>
+                    </li>
                     <li class="nav-item"><a class="nav-link" href="nghenhan.html">Nghệ Nhân</a></li>
                     <li class="nav-item"><a class="nav-link" href="khampha.html">Khám Phá</a></li>
                 </ul>
@@ -86,7 +90,8 @@
                         </form>
                     </li>
                     <li class="nav-item"><a class="nav-link" href=""><i class="bi bi-cart"></i></a></li>
-                    <li class="nav-item"><a class="nav-link" href="dangnhap.html"><i class="bi bi-person-circle fs-4"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="dangnhap.html"><i
+                                class="bi bi-person-circle fs-4"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -110,7 +115,7 @@
 
     <main class="container my-5 py-5">
         <div class="product-grid">
-            
+
             <div class="product-card" data-category="chau-lo-hoa">
                 <div class="img-wrapper"><img src="../img/gốm trang trí/chaucay.jpg" alt="Chậu cây"></div>
                 <div class="product-info">
@@ -118,7 +123,7 @@
                     <p>600.000đ</p><button class="btn btn-primary">Thêm vào giỏ</button>
                 </div>
             </div>
-            
+
             <div class="product-card" data-category="binh">
                 <div class="img-wrapper"><img src="../img/gốm trang trí/gom-su1.jpg" alt="Bình gốm"></div>
                 <div class="product-info">
@@ -126,7 +131,7 @@
                     <p>1.300.000đ</p><button class="btn btn-primary">Thêm vào giỏ</button>
                 </div>
             </div>
-            
+
             <div class="product-card" data-category="den-tuong">
                 <div class="img-wrapper"><img src="../img/gốm trang trí/lohoa.jpg" alt="Lọ hoa"></div>
                 <div class="product-info">
@@ -142,7 +147,7 @@
                     <p>560.000đ</p><button class="btn btn-primary">Thêm vào giỏ</button>
                 </div>
             </div>
-            
+
             <div class="product-card" data-category="den-tuong">
                 <div class="img-wrapper"><img src="../img/gốm trang trí/tuong.png" alt="Tượng gốm"></div>
                 <div class="product-info">
@@ -150,9 +155,10 @@
                     <p>1.990.000đ</p><button class="btn btn-primary">Thêm vào giỏ</button>
                 </div>
             </div>
-            
+
             <div class="product-card" data-category="binh">
-                <div class="img-wrapper"><img src="../img/gốm trang trí/binhgomthiennga.jpg" alt="Bình gốm thiên nga"></div>
+                <div class="img-wrapper"><img src="../img/gốm trang trí/binhgomthiennga.jpg" alt="Bình gốm thiên nga">
+                </div>
                 <div class="product-info">
                     <h5>Bình gốm thiên nga</h5>
                     <p>1.200.000đ</p><button class="btn btn-primary">Thêm vào giỏ</button>
@@ -160,6 +166,57 @@
             </div>
         </div>
     </main>
+
+    <div class="modal fade" id="productQuickViewModal" tabindex="-1" aria-labelledby="productModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered"> <!-- modal-lg để pop-up lớn hơn -->
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <!-- {/* Nút X để đóng */} -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-4">
+                        <!-- {/* Cột hình ảnh sản phẩm */} -->
+                        <div class="col-md-6">
+                            <img src="" id="modalProductImage" class="img-fluid rounded" alt="Product Image">
+                        </div>
+
+                        <!-- {/* Cột thông tin sản phẩm */} -->
+                        <div class="col-md-6 d-flex flex-column">
+                            <h2 class="heading-font" id="modalProductTitle">Tên sản phẩm sẽ ở đây</h2>
+
+                            <p class="fs-3 fw-bold mb-3" id="modalProductPrice" style="color: var(--color-accent);">Giá
+                                tiền</p>
+
+                            <!-- {/* Tùy chọn (giống trong ảnh bạn gửi) */} -->
+                            <div class="mb-3">
+                                <label for="modalProductOptions" class="form-label fw-bold">Tùy chọn:</label>
+                                <select class="form-select" id="modalProductOptions">
+                                    <option selected>Chọn kích thước/màu...</option>
+                                    <option value="1">Lựa chọn 1</option>
+                                    <option value="2">Lựa chọn 2</option>
+                                </select>
+                            </div>
+
+                            <!-- {/* Số lượng (giống trong ảnh bạn gửi) */} -->
+                            <div class="mb-4">
+                                <label for="modalProductQuantity" class="form-label fw-bold">Số lượng:</label>
+                                <input type="number" class="form-control" id="modalProductQuantity" value="1" min="1"
+                                    style="max-width: 100px;">
+                            </div>
+
+                            <!-- {/* Nút Thêm vào giỏ */} -->
+                            <button class="btn btn-primary btn-lg w-100"
+                                style="background-color: var(--color-accent); border-color: var(--color-accent);">
+                                Thêm vào giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer class="bg-dark text-white py-5">
         <div class="container text-center">

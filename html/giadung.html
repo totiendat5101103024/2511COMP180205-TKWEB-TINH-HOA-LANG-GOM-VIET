@@ -7,12 +7,10 @@
     <title>Gốm Gia Dụng</title>
     <link rel="icon" type="icon" href="../img/Logo Tinh hoa làng gốm việt.png">
 
-    <!-- Install Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Install Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -21,22 +19,31 @@
 
     <script src="https://unpkg.com/lunr/lunr.js"></script>
     <script src="../js/main.js"></script>
+    <script src="../js/filter.js"></script>
 
-    <!-- Link CSS -->
     <link rel="stylesheet" href="../css/stylesheet.css">
     <link rel="stylesheet" href="../css/page.css">
     <link rel="stylesheet" href="../css/sanpham.css">
 
     <style>
+        .page-header {
+            background-image: url("../img/gốm gia dụng/banner.jpg");
+        }
+
+        .product-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.4s ease, max-height 0.5s ease;
+            overflow: hidden;
+        }
+
+        .product-card.hidden {
+            opacity: 0;
+            max-height: 0;
+            padding: 0;
+            margin-bottom: 0 !important;
+            transform: scale(0.9);
+        }
+
         @media (max-width: 768px) {
-            body {
-                padding-top: 70px;
-            }
-
-            .navbar {
-                padding: 1rem 0;
-            }
-
             .page-header {
                 margin-top: -70px;
                 height: 50vh;
@@ -62,7 +69,8 @@
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item"><a class="nav-link" href="../index.html">Trang Chủ</a></li>
                     <li class="nav-item"><a class="nav-link" href="../index.html#story">Giới Thiệu</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../index.html#featured-products">Sản Phẩm</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="../index.html#featured-products">Sản Phẩm</a>
+                    </li>
                     <li class="nav-item"><a class="nav-link" href="nghenhan.html">Nghệ Nhân</a></li>
                     <li class="nav-item"><a class="nav-link" href="khampha.html">Khám Phá</a></li>
                 </ul>
@@ -75,8 +83,7 @@
                             <div id="search-results-list" class="search-results-dropdown list-group"></div>
                         </form>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="[ĐƯỜNG DẪN ĐẾN html/cart.html]"><i
-                                class="bi bi-cart"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="cart.html"><i class="bi bi-cart"></i></a></li>
                     <li class="nav-item"><a class="nav-link" href="dangnhap.html"><i
                                 class="bi bi-person-circle fs-4"></i></a></li>
                 </ul>
@@ -92,79 +99,113 @@
     </header>
 
     <div class="filter-bar sticky-top">
-        <div class="container text-center">
-            <button class="btn btn-outline-secondary active">Tất cả</button>
-            <button class="btn btn-outline-secondary">Bộ Bát Đĩa</button>
-            <button class="btn btn-outline-secondary">Ấm Chén</button>
-            <button class="btn btn-outline-secondary">Ly & Cốc</button>
+        <div class="container text-center" id="product-filter-buttons">
+            <button class="btn btn-outline-secondary active" data-filter="all">Tất cả</button>
+            <button class="btn btn-outline-secondary" data-filter="bat-dia">Bộ Bát Đĩa</button>
+            <button class="btn btn-outline-secondary" data-filter="am-chen">Ấm Chén</button>
+            <button class="btn btn-outline-secondary" data-filter="ly-coc">Ly & Cốc</button>
+            <button class="btn btn-outline-secondary" data-filter="chau-lo">Chậu & Lọ</button>
+            <button class="btn btn-outline-secondary" data-filter="khac">Khác</button>
         </div>
     </div>
 
     <main class="container my-5 py-5">
         <div class="product-grid">
-            <div class="product-card">
-                <div class="img-wrapper"><img
-                        src="https://images.unsplash.com/photo-1610733560133-722a8c66e4a2?q=80&w=1974&auto=format&fit=crop"
-                        alt="Bộ Bát Gốm Hoa Văn Sen"></div>
+            <div class="product-card" data-category="bat-dia">
+                <div class="img-wrapper"><img src="../img/gốm gia dụng/Bộ Bát Đĩa Men Xanh.jpg"
+                        alt="Bộ Bát Đĩa Men Xanh"></div>
                 <div class="product-info">
-                    <h5>Bộ Bát Gốm Hoa Văn Sen</h5>
-                    <p>650.000đ</p><button class="btn btn-primary">Thêm vào giỏ</button>
+                    <h5>Bộ Bát Đĩa Men Xanh</h5>
+                    <p>950.000đ</p><button class="btn btn-primary">Thêm vào giỏ</button>
                 </div>
             </div>
-            <div class="product-card">
-                <div class="img-wrapper"><img
-                        src="https://images.unsplash.com/photo-1565194999252-9b2a75d18d48?q=80&w=1974&auto=format&fit=crop"
-                        alt="Bộ Ấm Chén Men Lam Cổ"></div>
+            <div class="product-card" data-category="am-chen">
+                <div class="img-wrapper"><img src="../img/gốm gia dụng/Bộ Ấm Trà Gốm Cao Cấp.jpg"
+                        alt="Bộ Ấm Trà Gốm Cao Cấp"></div>
                 <div class="product-info">
-                    <h5>Bộ Ấm Chén Men Lam Cổ</h5>
+                    <h5>Bộ Ấm Trà Gốm Cao Cấp</h5>
                     <p>850.000đ</p><button class="btn btn-primary">Thêm vào giỏ</button>
                 </div>
             </div>
-            <div class="product-card">
-                <div class="img-wrapper"><img
-                        src="https://images.unsplash.com/photo-1620499263901-d27376483b3e?q=80&w=1964&auto=format&fit=crop"
-                        alt="Cốc Gốm Vuốt Tay"></div>
+            <div class="product-card" data-category="ly-coc">
+                <div class="img-wrapper"><img src="../img/gốm gia dụng/Cốc Sứ Tráng Men.jpg" alt="Cốc Sứ Tráng Men">
+                </div>
                 <div class="product-info">
-                    <h5>Cốc Gốm Vuốt Tay Mộc</h5>
+                    <h5>Cốc Sứ Tráng Men</h5>
                     <p>180.000đ</p><button class="btn btn-primary">Thêm vào giỏ</button>
                 </div>
             </div>
-            <div class="product-card">
-                <div class="img-wrapper"><img
-                        src="https://images.unsplash.com/photo-1598342435478-e6da377fb44f?q=80&w=1974&auto=format&fit=crop"
-                        alt="Đĩa Trưng Bày Vẽ Tay"></div>
+            <div class="product-card" data-category="chau-lo">
+                <div class="img-wrapper"><img src="../img/gốm gia dụng/Lọ Hoa Men Hỏa Biến Cao Cấp.jpg"
+                        alt="Lọ Hoa Men Hỏa Biến Cao Cấp"></div>
                 <div class="product-info">
-                    <h5>Đĩa Trưng Bày Vẽ Cá Chép</h5>
-                    <p>450.000đ</p><button class="btn btn-primary">Thêm vào giỏ</button>
+                    <h5>Lọ Hoa Men Hỏa Biến Cao Cấp</h5>
+                    <p>1.200.000đ</p><button class="btn btn-primary">Thêm vào giỏ</button>
                 </div>
             </div>
-            <div class="product-card">
-                <div class="img-wrapper"><img
-                        src="https://images.unsplash.com/photo-1605832525181-702353a404c0?q=80&w=1974&auto=format&fit=crop"
-                        alt="Bộ Bát Men Ngọc"></div>
+            <div class="product-card" data-category="chau-lo">
+                <div class="img-wrapper"><img src="../img/gốm gia dụng/Chậu Trồng Cây Men Xanh.jpg"
+                        alt="Chậu Trồng Cây Men Xanh"></div>
                 <div class="product-info">
-                    <h5>Bộ Bát Men Ngọc Lục Bảo</h5>
-                    <p>750.000đ</p><button class="btn btn-primary">Thêm vào giỏ</button>
+                    <h5>Chậu Trồng Cây Men Xanh</h5>
+                    <p>380.000đ</p><button class="btn btn-primary">Thêm vào giỏ</button>
                 </div>
             </div>
-            <div class="product-card">
-                <div class="img-wrapper"><img
-                        src="https://images.unsplash.com/photo-1618343890587-195c47953b27?q=80&w=1964&auto=format&fit=crop"
-                        alt="Hũ Đựng Trà Men Rạn"></div>
+            <div class="product-card" data-category="khac">
+                <div class="img-wrapper"><img src="../img/gốm gia dụng/Bình Đựng Gia Vị Gốm Mộc.jpg"
+                        alt="Bình Đựng Gia Vị Gốm Mộc"></div>
                 <div class="product-info">
-                    <h5>Hũ Đựng Trà Men Rạn Cổ</h5>
-                    <p>550.000đ</p><button class="btn btn-primary">Thêm vào giỏ</button>
+                    <h5>Bình Đựng Gia Vị Gốm Mộc</h5>
+                    <p>160.000đ</p><button class="btn btn-primary">Thêm vào giỏ</button>
                 </div>
             </div>
         </div>
     </main>
 
+    <div class="modal fade" id="productQuickViewModal" tabindex="-1" aria-labelledby="productModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <img src="" id="modalProductImage" class="img-fluid rounded" alt="Product Image">
+                        </div>
+                        <div class="col-md-6 d-flex flex-column">
+                            <h2 class="heading-font" id="modalProductTitle">Tên sản phẩm sẽ ở đây</h2>
+                            <p class="fs-3 fw-bold mb-3" id="modalProductPrice" style="color: var(--color-accent);">Giá
+                                tiền</p>
+                            <div class="mb-3">
+                                <label for="modalProductOptions" class="form-label fw-bold">Tùy chọn:</label>
+                                <select class="form-select" id="modalProductOptions">
+                                    <option selected>Chọn kích thước/màu...</option>
+                                    <option value="1">Lựa chọn 1</option>
+                                    <option value="2">Lựa chọn 2</option>
+                                </select>
+                            </div>
+                            <div class="mb-4">
+                                <label for="modalProductQuantity" class="form-label fw-bold">Số lượng:</label>
+                                <input type="number" class="form-control" id="modalProductQuantity" value="1" min="1"
+                                    style="max-width: 100px;">
+                            </div>
+                            <button class="btn btn-primary btn-lg w-100"
+                                style="background-color: var(--color-accent); border-color: var(--color-accent);">
+                                Thêm vào giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <footer class="bg-dark text-white py-5">
         <div class="container text-center">
             <p>&copy; 2025 Tinh Hoa Làng Gốm Việt. Một sản phẩm cho đồ án học phần Thiết kế Web.</p>
         </div>
     </footer>
-
 
 </body>
 
